@@ -1,0 +1,233 @@
+{
+  "id": "2314899",
+  "name": "互联网医院医生端",
+  "font_family": "my-icon",
+  "css_prefix_text": "my-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "908538",
+      "name": "语音",
+      "font_class": "yuyin",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "2742685",
+      "name": "语音",
+      "font_class": "yuyin1",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "19040246",
+      "name": "处方",
+      "font_class": "chufang",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "19040253",
+      "name": "看诊记录",
+      "font_class": "kanzhenjilu",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "6308124",
+      "name": "筛选",
+      "font_class": "shaixuan",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "1522909",
+      "name": "系统设置",
+      "font_class": "xitongshezhi",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "2157469",
+      "name": "随访管理",
+      "font_class": "suifangguanli",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "2590644",
+      "name": "工作台",
+      "font_class": "gongzuotai",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "2892383",
+      "name": "评价",
+      "font_class": "pingjia1",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5068454",
+      "name": "库",
+      "font_class": "ku",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "6559800",
+      "name": "出差管理",
+      "font_class": "chuchaguanli",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "8712627",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "11500143",
+      "name": "清除",
+      "font_class": "qingchu",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "13353614",
+      "name": "预约",
+      "font_class": "yuyue3",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "17012190",
+      "name": "在线问诊",
+      "font_class": "20_zaixianwenzhen",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "18509828",
+      "name": "订单",
+      "font_class": "icon-",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "19040252",
+      "name": "收藏夹",
+      "font_class": "shoucangjia",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "19250339",
+      "name": "服务设置",
+      "font_class": "fuwushezhi",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "19250340",
+      "name": "中医",
+      "font_class": "zhongyi",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "19250341",
+      "name": "请假",
+      "font_class": "qingjia",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "19250342",
+      "name": "审批",
+      "font_class": "shenpi",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "19250343",
+      "name": "排班",
+      "font_class": "paiban",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "19250344",
+      "name": "转诊",
+      "font_class": "zhuanzhen",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "19251382",
+      "name": "医案库",
+      "font_class": "yianku",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "19251383",
+      "name": "膳食",
+      "font_class": "shanshi",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "19251384",
+      "name": "药品库",
+      "font_class": "yaopinku",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "19254215",
+      "name": "用户组",
+      "font_class": "yonghuzu",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "19254216",
+      "name": "门诊患者",
+      "font_class": "menzhenhuanzhe",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "19254217",
+      "name": "重点关注",
+      "font_class": "zhongdianguanzhu",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "19254218",
+      "name": "转诊患者",
+      "font_class": "zhuanzhenhuanzhe",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "19254219",
+      "name": "住院患者",
+      "font_class": "zhuyuanhuanzhe",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "19256459",
+      "name": "个人资料",
+      "font_class": "gerenziliao",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    }
+  ]
+}
