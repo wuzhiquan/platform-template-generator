@@ -18,18 +18,18 @@ Warning:
         <p class="tips">设置后，所有通知将用红点显示，不再显示未读数字</p>
       </div>
       <template #right-icon>
-        <van-switch v-model="checked" size="24" />
+        <van-switch v-model="checked" />
       </template>
     </van-cell>
     <div class="setting-bottom">
       <van-cell center title="接收检验报告提醒">
         <template #right-icon>
-          <van-switch v-model="checked2" size="24" @change="changeInspectionReport" />
+          <van-switch v-model="checked2" @change="changeInspectionReport" />
         </template>
       </van-cell>
       <van-cell center title="接收报告危机值提醒">
         <template #right-icon>
-          <van-switch v-model="checked3" size="24" @change="changeCriticalValue" />
+          <van-switch v-model="checked3" @change="changeCriticalValue" />
         </template>
       </van-cell>
     </div>
@@ -92,5 +92,8 @@ export default {
 }
 .setting-bottom {
   padding-top: 10px;
+}
+.van-switch{
+  font-size: 24px;
 }
 </style>

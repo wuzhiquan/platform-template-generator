@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page>
     <template #headerRight>
-      <van-icon name="success" size="24" color="#1678FF" @click="toIndex"/>
+      <van-icon name="success" color="#1678FF" @click="toIndex"/>
     </template>
     <van-form @submit="onSubmit">
       <van-field v-model="title" name="标题" label="标题" placeholder="请输入标题"/>
@@ -22,7 +22,7 @@ Warning:
       <van-field v-model="remark" name="备注" label="备注" placeholder="请输入备注"/>
       <van-field name="是否提醒" label="是否提醒">
         <template #input>
-          <van-switch v-model="checked" @click="onChange" size="24px"/>
+          <van-switch v-model="checked" @click="onChange"/>
         </template>
       </van-field>
     </van-form>
@@ -62,11 +62,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 ::v-deep .van-cell__title {
-    margin: 0;
-    width: 70px;
+  margin: 0;
+  width: 70px;
 }
 ::v-deep .van-switch{
-    position: relative;
-    margin-left: 220px;
-  }
+  position: relative;
+  margin-left: 220px;
+}
+.van-icon,.van-switch{
+  font-size: 24px;
+}
 </style>

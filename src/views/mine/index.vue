@@ -53,9 +53,11 @@ Warning:
           </van-col>
         </van-row>
       </div> -->
-      <template v-for="(item, index) in menuList">
-        <cell-list :key="index" :list="item" @cellClick="linkFn"/>
-      </template>
+      <div style="flex: 1;overflow: auto;">
+        <template v-for="(item, index) in menuList">
+          <cell-list :key="index" :list="item" @cellClick="linkFn"/>
+        </template>
+      </div>
     </div>
   </wrap-page>
 </template>
@@ -101,6 +103,8 @@ export default {
 }
 .mine-page{
   height: 100%;
+  display: flex;
+  flex-direction: column;
   .header{
     padding: 16px;
     background-image: linear-gradient(to right, $deep-blue, $light-blue);

@@ -32,7 +32,7 @@ Warning:
         </van-cell>
         <van-cell v-for="(item, index) in groupList" :key="index" is-link @click="$router.push('/home/service')">
           <template #title>
-            {{item.name}}<span style="font-size: 12px;color: #ccc;">（{{item.num}}）</span>
+            {{item.name}}<span class="tips">（{{item.num}}）</span>
           </template>
           <template v-if="item.hasDot">
             <em class="dot"/>
@@ -84,6 +84,8 @@ export default {
 <style lang='scss' scoped>
 .patient{
   height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
   .quick{
     display: grid;
     background: #fff;
@@ -114,6 +116,8 @@ export default {
   }
   .cell-group{
     margin-top: 10px;
+    flex: 1;
+    overflow: auto;
     .cell-icon{
       color: #fff;
       display: inline-block;
@@ -140,6 +144,10 @@ export default {
       position: relative;
       top: -1px;
       margin-right: 2px;
+    }
+    .tips{
+      font-size: 12px;
+      color: $light-black2;
     }
   }
 }

@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page :headerTitle="patient.name">
     <template #headerRight>
-      <van-icon name="success" color="#1678FF" size="24"/>
+      <van-icon name="success" color="#1678FF"/>
     </template>
     <van-cell title="姓名" :value="patient.name" />
     <van-cell title="性别" :value="+patient.gender === 1 ? '男' : '女'" />
@@ -21,7 +21,7 @@ Warning:
     <van-cell title="证件类型" value="身份证" />
     <van-cell title="证件号码" value="441781**********12" />
     <van-cell title="手机号码" value="134****5678" />
-    <van-field :label-width="40" v-model="remark" rows="2" label="备注" type="textarea" placeholder="请输入备注" />
+    <van-field v-model="remark" rows="2" label="备注" type="textarea" placeholder="请输入备注" />
   </wrap-page>
 </template>
 
@@ -54,5 +54,11 @@ export default {
 <style lang='scss' scoped>
 .van-field{
   margin-top: 10px;
+}
+.van-icon{
+  font-size: 24px;
+}
+::v-deep .van-field__label{
+  width: 40px;
 }
 </style>

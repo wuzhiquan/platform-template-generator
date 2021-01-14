@@ -22,10 +22,10 @@ Warning:
     <cell-list :list="collectionList" @cellClick="linkFn" class="cell-list"/>
     <van-cell title="重点关注">
       <template #icon>
-        <van-icon class-prefix="my-icon" name="zhongdianguanzhu" color="#00B7F4" size="18"/>
+        <van-icon class-prefix="my-icon" name="zhongdianguanzhu" color="#00B7F4"/>
       </template>
       <template>
-        <van-switch v-model="follow" size="20"/>
+        <van-switch v-model="follow"/>
       </template>
     </van-cell>
   </wrap-page>
@@ -82,11 +82,15 @@ export default {
 }
 .my-icon{
   margin-right: 6px;
+  font-size: 18px;
 }
 .van-cell{
   padding: 10px 12px;
   display: flex;
   align-items: center;
+}
+.van-switch{
+  font-size: 20px;
 }
 ::v-deep .person_info{
   border-bottom: none;

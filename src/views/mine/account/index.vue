@@ -1,7 +1,7 @@
 <template>
   <wrap-page>
     <template #headerRight>
-      <van-icon name="search" color="#666" size="20" @click="show=!show" />
+      <van-icon name="search" color="#666" @click="show=!show" />
     </template>
     <div class="main">
       <van-tabs v-model="active" swipeable>
@@ -31,7 +31,9 @@
               </div>
             </div>
             <div class="item_bottom"  @click="toRouter('AccountDetails', item)">
-              <van-image class="img" :src="item.accountImg" />
+              <div class="img_box" :style="{background: accountType[item.type].bgc}">
+                <van-image class="img" :src="accountType[item.type].img" />
+              </div>
               <div class="bottom_left">
                 <div class="bottom_top">
                   <span class="accountType">{{ accountType[item.type].name }}</span>
@@ -103,7 +105,6 @@ export default {
           address: '阳江市江城区(江城街道社区)东山路668号',
           headIcon: 'https://img.yzcdn.cn/vant/cat.jpeg',
           status: 1,
-          accountImg: require('@/assets/img/image.png'),
           type: 1,
           price: '6.00',
           doneTime: '2020-12-18  14:00-16:00',
@@ -118,7 +119,6 @@ export default {
           address: '阳江市江城区(江城街道社区)东山路668号',
           headIcon: 'https://img.yzcdn.cn/vant/cat.jpeg',
           status: 2,
-          accountImg: require('@/assets/img/image.png'),
           type: 2,
           price: '6.00',
           doneTime: '2020.07.16 14:00 - 2020.07.17 13:59',
@@ -133,7 +133,6 @@ export default {
           address: '阳江市江城区(江城街道社区)东山路668号',
           headIcon: 'https://img.yzcdn.cn/vant/cat.jpeg',
           status: 3,
-          accountImg: require('@/assets/img/image.png'),
           type: 2,
           price: '6.00',
           doneTime: '2020.07.16 14:00 - 2020.07.17 13:59',
@@ -146,8 +145,9 @@ export default {
         3: { name: '待评价' },
       },
       accountType: {
-        1: { name: '预约挂号', timeText: '预约时间' },
-        2: { name: '在线问诊', timeText: '问诊时间' },
+        1: { name: '预约挂号', timeText: '预约时间', img: require('@/assets/img/registered.png'), bgc: '#81cbff' },
+        2: { name: '在线问诊', timeText: '问诊时间', img: require('@/assets/img/visits.png'), bgc: '#5fdb8f' },
+        3: { name: '按方开药', timeText: '下单时间', img: require('@/assets/img/prescribing.png'), bgc: '#adb0ff' },
       },
       loading: false,
       isLoading: false,
@@ -239,10 +239,17 @@ export default {
       .item_bottom {
         padding: 12px;
         display: flex;
-        .img {
-          margin-right: 12px;
+        .img_box {
+          border-radius: 4px;
           height: 48px;
           width: 48px;
+          margin-right: 12px;
+          text-align: center;
+          padding-top: 9px;
+        }
+        .img {
+          height: 30px;
+          width: 30px;
         }
         .bottom_left {
           flex-grow: 1;
@@ -280,5 +287,8 @@ export default {
 }
 ::v-deep .van-tabs__line {
   background-color: #1677ff;
+}
+.van-icon{
+  font-size: 20px;
 }
 </style>

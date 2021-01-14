@@ -6,7 +6,7 @@
           <van-image class="setting_img" :src="item.img" />
           <span class="setting_name">{{ item.name }}</span>
         </div>
-        <van-switch class="setting_right" size="22px" v-model="data[item.key]" />
+        <van-switch class="setting_right" v-model="data[item.key]" />
       </div>
   </wrap-page>
 </template>
@@ -76,6 +76,9 @@ export default {
   }
   .setting_right {
     margin-top: 13px;
+  }
+  .van-switch{
+    font-size: 22px;
   }
 }
 </style>

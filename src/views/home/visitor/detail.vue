@@ -24,10 +24,8 @@ Warning:
           <i class="point"/>
           <div class="date-font border-soild">{{item.date}}</div>
         </div>
-        <div v-for="(list, index2) in item.List" :key="index2"
-        @click= "list.status === 1?getHint(list.title):''">
-          <div class="font-message"
-          :style="{backgroundColor: list.status === 1 ? 'rgba(232, 232, 232, 1)': '#fff'}">
+        <div v-for="(list, index2) in item.List" :key="index2" @click= "list.status === 1?getHint(list.title):''">
+          <div class="font-message" :style="{backgroundColor: list.status === 1 ? 'rgba(232, 232, 232, 1)': '#fff'}">
             <div class="font-message-left">
               <span class="font-message-left-top" :style="{color:list.status === 2 ? '#FFB24E' :'#666666' }">{{list.day}}</span><br>
               <span>{{list.week}}</span>
@@ -37,26 +35,26 @@ Warning:
               <span :style="{color:list.status === 2 ? '#FFB24E' :'#000000', display: 'inline-block', paddingLeft: '100px'}">{{list.message}}</span><br>
               <span>{{list.desc}}</span>
             </div>
-            </div>
-          <div v-show="index2 != item.List.length - 1" class="across border-soild"></div>
+          </div>
+          <div v-show="index2 != item.List.length - 1" class="across border-soild" style="width: 1px"></div>
         </div>
       </div>
     </div>
-    <van-popup v-model="show" position="bottom" :style="{ height: '140px' }">
+    <van-popup v-model="show" position="bottom" class="delete-popup">
       <div class="footer">
         <div class="footer-title">{{title}}</div>
         <div style="position: relative">
-          <van-icon name="delete-o" size="20px" class="footer-icon"/>
+          <van-icon name="delete-o" class="footer-icon"/>
           <span class="footer-select" @click="deletePlan">删除此计划</span>
         </div>
         <div style="position: relative">
-          <van-icon name="add-o" size="20px" class="footer-icon"/>
+          <van-icon name="add-o" class="footer-icon"/>
           <span class="footer-select" @click="addPlan">添加此计划</span>
           <span class="footer-select-right">(在此计划的下方添加)</span>
         </div>
       </div>
     </van-popup>
-     <van-popup v-model="wramShow" :style="{height: '170px', width: '300px',}" class="raduis">
+     <van-popup v-model="warnShow" class="raduis">
        <div class="warn">
          <div class="warn-header">
            <p class="warn-title">确认删除选中计划吗?</p>
@@ -85,7 +83,7 @@ export default {
     return {
       title: '',
       show: false,
-      wramShow: false,
+      warnShow: false,
       data: {
         person: {
           headIcon: require('@/assets/img/avatar.png'),
@@ -161,17 +159,17 @@ export default {
       this.show = !this.show;
     },
     deletePlan() {
-      this.wramShow = !this.wramShow;
+      this.warnShow = !this.warnShow;
       this.show = !this.show;
     },
     addPlan() {
       this.$router.push('/home/visitorPlan');
     },
     concel() {
-      this.wramShow = !this.wramShow;
+      this.warnShow = !this.warnShow;
     },
     confirm() {
-      this.wramShow = !this.wramShow;
+      this.warnShow = !this.warnShow;
       Toast({
         message: '操作成功!',
         className: 'visitor-Toastspace',
@@ -185,6 +183,7 @@ export default {
 <style lang="scss" scoped>
 .border-soild {
    border-left: 1px #e4e4e4 solid;
+   margin-right: 0px;
 }
 .date-font {
   font-size: 14px;
@@ -194,7 +193,7 @@ export default {
   padding-left: 10px;
 }
 .top {
-  height: 40px;
+  height: 42px;
   padding-left: 10px;
   line-height: 40px;
   position: relative;
@@ -296,6 +295,8 @@ export default {
 }
 .raduis {
   border-radius: 20px;
+  height: 170px;
+  width: 300px;
 }
 ::v-deep .person_info {
   border-bottom: 0;
@@ -303,6 +304,12 @@ export default {
 .across {
   height: 10px;
   margin: 0 0 0 10px;
+}
+.delete-popup{
+  height: 140px;
+}
+.van-icon{
+  font-size: 20px;
 }
 </style>
 
@@ -314,8 +321,6 @@ export default {
   border-radius: 20px;
   padding: 0;
   flex-direction: row;
-  animation-name: toast;
-  animation-duration: 1.5s;
   .van-toast__text {
     font-size: 14px;
     margin: 0;

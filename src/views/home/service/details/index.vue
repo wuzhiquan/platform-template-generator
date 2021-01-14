@@ -17,15 +17,14 @@
     </div>
     <footer>
       <div class="flex">
-        <van-icon class="chat-icon" class-prefix="my-icon" name="yuyin" size="22" />
+        <van-icon class="chat-icon" class-prefix="my-icon" name="yuyin" />
         <input type="text" v-model="message" />
         <van-uploader multiple :after-read="afterRead">
-          <van-icon class="chat-icon icon-photo" name="photograph" size="22" />
+          <van-icon class="chat-icon icon-photo" name="photograph" />
         </van-uploader>
         <van-icon
           class="chat-icon"
           name="add-o"
-          size="22"
           @click="show = true"
           v-if="message === ''"
         />
@@ -39,7 +38,7 @@
           :key="item.label"
           @click="handleMethods(item.method)"
         >
-          <div class="icon">
+          <div class="icon" :style="{background: item.bgc}">
             <van-icon v-if="item.vanIcon" :name="item.vanIcon" />
             <van-icon v-if="item.icon" class-prefix="my-icon" :name="item.icon" />
           </div>
@@ -68,16 +67,17 @@ export default {
   data() {
     return {
       moreList: [
-        { label: '问诊单', method: 'inquiry', icon: 'kanzhenjilu' },
-        { label: '舌面照', method: 'tongue', vanIcon: 'photo-o' },
-        { label: '问诊小结', method: 'summary', icon: 'chufang' },
-        { label: '结束问诊', method: 'end', vanIcon: 'stop-circle-o' },
+        { label: '问诊单', method: 'inquiry', icon: 'icon-', bgc: '#81cbff' },
+        { label: '舌面照', method: 'tongue', icon: 'photo', bgc: '#5fdb8f' },
+        { label: '问诊小结', method: 'summary', vanIcon: 'completed', bgc: '#adb0ff' },
+        { label: '问诊评价', method: 'comment', icon: 'pingjia1', bgc: '#ffb24e' },
+        { label: '结束问诊', method: 'end', icon: 'jieshu', bgc: '#ffb24e' },
       ],
       show: false,
       contact: this.$route.query.contact || '陈剑秋', // 联系人
       message: '', // 发送消息
       contactHead: require('@/assets/img/avatar.jpg'), // 联系人头像
-      ownerHead: require('@/assets/img/avatar.jpg'), // 个人头像
+      ownerHead: require('@/assets/img/avatar.png'), // 个人头像
       chatList: [],
       menu: [
         { text: '拒诊', icon: 'close' },
@@ -183,11 +183,21 @@ export default {
         },
       });
     },
-    // 结束问诊
-    end() {
+    // 问诊评价
+    comment() {
       const data = {
         a6: { id: 1, contact: 0, type: 9, message: '', time: '' }, // 问诊评价
         q3: { id: 1, contact: 1, type: 10, message: '', time: '' }, // 查看问诊评价
+      };
+      this.sendAuto(data);
+    },
+    // 结束问诊
+    end() {
+      const data = {
+        a7: { id: 1, contact: 0, type: 1, message: '您好！我的问诊时段已满，不方便再为您服务，建议您选择其他医师，感谢您的支持！', time: '' },
+        a8: { id: 1, contact: 0, type: 1, message: '您好！您的情况不适合在线问诊，建议您来院就诊，感谢您的支持！', time: '' },
+        a9: { id: 1, contact: 0, type: 11, message: '', time: '' }, // 问诊结束
+        q4: { id: 1, contact: 1, type: 1, message: '【我已确认知晓】', time: '' },
       };
       this.sendAuto(data);
     },
@@ -274,12 +284,12 @@ export default {
 }
 .van-popup {
   height: 120px;
-  background-color: #eee;
+  background-color: #fff;
 }
 .more {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(5, 20%);
   li {
     font-size: 12px;
     color: $light-black;
@@ -289,7 +299,7 @@ export default {
     align-items: center;
     .van-icon,
     .my-icon {
-      color: #333;
+      color: #fff;
       font-size: 26px;
     }
     .icon {
@@ -305,5 +315,8 @@ export default {
       margin: 12px 0 0 0;
     }
   }
+}
+.van-icon{
+  font-size: 22px;
 }
 </style>

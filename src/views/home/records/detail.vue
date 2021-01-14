@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page>
     <template #headerRight>
-      <van-icon name="replay" size="20" color="#666"/>
+      <van-icon name="replay" color="#666"/>
     </template>
     <div class="title">
       <stars></stars>

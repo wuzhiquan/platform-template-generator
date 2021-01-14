@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page hasSearch :searchPlaceholder="'病例/病例集'" @querySearch="getSearch">
     <template #headerRight>
-      <van-icon name="replay" size="20" color="#666"/>
+      <van-icon name="replay" color="#666"/>
     </template>
     <div class="listcase">
       <van-tabs v-model="active">
@@ -26,8 +26,7 @@ Warning:
               <span :style="{ color: item.color }">{{ item.text }}</span>
               <van-icon
               :name="item.Icon"
-              class-prefix="my-icon"
-              size="12"/>
+              class-prefix="my-icon"/>
             </div>
           </template>
         </van-tab>
@@ -178,6 +177,9 @@ export default {
   }
   .tab:hover {
     color: $blue;
+  }
+  .my-icon-shaixuan{
+    font-size: 12px;
   }
 }
 </style>

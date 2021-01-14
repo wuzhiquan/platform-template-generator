@@ -1,7 +1,7 @@
 <template>
   <wrap-page hasSearch :searchPlaceholder="'病例/病例集'" @querySearch="getSearch">
     <template #headerRight>
-      <van-icon name="replay" size="20" color="#666"/>
+      <van-icon name="replay" color="#666"/>
     </template>
     <van-tree-select
       class="records"

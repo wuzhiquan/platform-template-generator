@@ -14,7 +14,7 @@
           @select="onSelect"
         >
           <template #reference>
-            <van-icon name="ellipsis" size="24" color="#909399" />
+            <van-icon name="ellipsis" color="#909399" />
           </template>
         </van-popover>
       </slot>
@@ -90,6 +90,9 @@ export default {
 ::v-deep .van-icon-arrow-left {
   color: #666;
   font-size: 20px;
+}
+.van-icon{
+  font-size: 24px;
 }
 </style>
 <style lang="scss">

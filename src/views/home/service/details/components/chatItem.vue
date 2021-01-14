@@ -62,7 +62,7 @@
         <!-- 问诊结束 -->
         <span class="tongue-map text" v-if="chat.type===11">
           <p>系统提示：问诊已结束，您的问诊费用将会在7个工作日内原路退回。</p>
-          <van-button class="know-btn" color="#333333">请确认知晓</van-button>
+          <van-button class="know-btn">请确认知晓</van-button>
         </span>
         <!-- 聊天文本 -->
         <span class="text" v-if="chat.type===1" v-text="chat.message"></span>
@@ -124,7 +124,7 @@ export default {
     margin-top: 5px;
   }
   .know-btn {
-    color: #FFF;
+    color: #333;
   }
   .text {
     position: relative;

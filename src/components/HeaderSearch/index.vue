@@ -15,8 +15,8 @@ Warning:
     <div class="header">
       <p>{{title}}</p>
       <div class="right" v-if="message">
-        <van-icon name="delete-o" size="22"/>
-        <van-icon name="setting-o" size="22" @click="$router.push('/message/setting')"/>
+        <van-icon name="delete-o"/>
+        <van-icon name="setting-o" @click="$router.push('/message/setting')"/>
       </div>
     </div>
     <van-search v-model="searchValue" placeholder="搜索" />
@@ -68,6 +68,7 @@ export default {
     top: 11px;
     .van-icon{
       margin-right: 16px;
+      font-size: 22px;
     }
   }
 }

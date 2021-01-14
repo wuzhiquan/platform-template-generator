@@ -16,7 +16,7 @@
         <span class="bottom_right" v-if="bottomRight">{{ bottomRight }}</span>
       </div>
     </div>
-    <van-icon name="arrow" v-if="arrowIcon" size="16" color="#969799"/>
+    <van-icon name="arrow" v-if="arrowIcon" color="#969799"/>
   </div>
 </template>
 
@@ -68,6 +68,7 @@ export default {
     display: flex;
     align-items: center;
     padding-right: 12px;
+    font-size: 16px;
   }
 }
 .person_img {

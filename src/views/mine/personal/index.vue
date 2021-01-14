@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page>
     <template #headerRight>
-      <van-icon name="success" color="#1678FF" size="24"/>
+      <van-icon name="success" color="#1678FF"/>
     </template>
     <van-cell-group>
       <van-cell title="头像" is-link>
@@ -25,7 +25,7 @@ Warning:
       <van-cell title="职称" value="主任医师" />
       <van-cell title="科室" value="妇科" />
     </van-cell-group>
-    <van-field :label-width="40" v-model="goodAt" rows="3" label="擅长" type="textarea" placeholder="请输入" />
+    <van-field v-model="goodAt" rows="3" label="擅长" type="textarea" placeholder="请输入" />
   </wrap-page>
 </template>
 
@@ -65,5 +65,11 @@ export default {
 .van-cell__right-icon{
   position: relative;
   top: 4px;
+}
+.van-icon{
+  font-size: 24px;
+}
+::v-deep .van-field__label{
+  width: 40px;
 }
 </style>

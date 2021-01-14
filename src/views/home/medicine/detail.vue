@@ -21,7 +21,7 @@ Warning:
           <span v-html="item.desc" class="font-content"></span>
         </p>
       </div>
-      <stars style="top: 15px" size="20px"></stars>
+      <stars style="top: 15px" />
       <div v-for="(item, index2) in items.slice(1)"
       :key="index2 + 'index'"
       class="drugs-for-details">

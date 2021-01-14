@@ -3,8 +3,7 @@
     <van-icon :name="show?'star-o':'star'"
     @click="show = !show"
     :color="show?'black':'yellow'"
-    class="flex-icon"
-    size="20px"/>
+    class="flex-icon"/>
     <p class="flex-content">{{show?'收藏':'已收藏' }}</p>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
 .flex {
   position: absolute;
   right: 20px;
-  width: 40PX;
+  width: 40px;
   .flex-icon {
     left: 10px;
   }
@@ -32,6 +31,9 @@ export default {
     font-size: 13px;
     color: #666666;
     text-align: center;
+  }
+  .van-icon{
+    font-size: 20px;
   }
 }
 </style>

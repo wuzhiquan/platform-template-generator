@@ -40,7 +40,7 @@ Warning:
           </p>
           <ul class="app-list">
             <li v-for="i in item.list" :key="i.value" :style="`opacity: ${i.disable ? 0.3 : 1};`" @click="openApp(i.value)">
-              <van-icon class-prefix="my-icon" :name="i.icon" :color="i.color"/>
+              <van-icon class-prefix="my-icon" :name="i.icon" :color="i.disable ? '#999' : i.color"/>
               {{i.label}}
             </li>
           </ul>

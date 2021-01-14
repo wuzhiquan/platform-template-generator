@@ -14,7 +14,7 @@ Warning:
   <div class="menu">
     <van-cell  v-for="i in list" :key="i.name" :title="i.title" :value="i.rightValue || ''" is-link @click="$emit('cellClick', i.name)">
       <template #icon>
-        <van-icon class-prefix="my-icon" :name="i.icon" size="18" :color="i.color"/>
+        <van-icon class-prefix="my-icon" :name="i.icon" :color="i.color"/>
       </template>
     </van-cell>
   </div>
@@ -47,6 +47,7 @@ export default {
 }
 .my-icon{
   margin-right: 6px;
+  font-size: 18px;
 }
 .van-cell{
   padding: 12px;

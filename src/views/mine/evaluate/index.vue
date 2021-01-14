@@ -22,13 +22,13 @@ Warning:
       <van-cell v-for="(item, i) in list" :key="i">
         <template #title>
           <div class="comment">
-            <img width="18" height="18" :src="item.pic" alt="">
+            <img :src="item.pic" alt="">
             <div class="user-comment">
               <div class="user">
                 <span>{{item.name}}</span><span class="time">{{item.date}}</span>
               </div>
               <p class="content">{{item.comment}}</p>
-              <div class="rate"><span>服务评价：超极满意</span><van-rate readonly color="#FF8F1F" size="14" v-model="list[i].rate" /></div>
+              <div class="rate"><span>服务评价：超极满意</span><van-rate readonly color="#FF8F1F" v-model="list[i].rate" /></div>
               <p class="diagnosis">医生诊断：{{item.diagnosis}}</p>
               <p class="cure">治疗方式：{{item.cure}}</p>
             </div>
@@ -103,6 +103,8 @@ export default {
     img{
       border-radius: 50%;
       margin-right: 10px;
+      height: 18px;
+      width: 18px;
     }
     .user-comment{
       width: 100%;
@@ -136,6 +138,9 @@ export default {
   }
   ::v-deep .van-cell{
     padding: 0 15px;
+  }
+  .van-rate{
+    font-size: 14px;
   }
 }
 </style>

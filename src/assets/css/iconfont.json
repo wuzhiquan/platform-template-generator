@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13161757",
+      "name": "结束",
+      "font_class": "jieshu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "19319225",
+      "name": "photo",
+      "font_class": "photo",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
       "icon_id": "908538",
       "name": "语音",
       "font_class": "yuyin",

@@ -8,7 +8,7 @@
     <div :class="{'page-inner': true, main: !isIndex}">
       <van-search v-if="hasSearch" v-model="searchValue" :placeholder="searchPlaceholder" @input="querySearch">
         <template #right-icon>
-          <van-icon class-prefix="my-icon" name="yuyin1" size="14" color="#ccc" @click="voiceClick" />
+          <van-icon class-prefix="my-icon" name="yuyin1" color="#ccc" @click="voiceClick" />
         </template>
       </van-search>
       <slot/>
@@ -134,6 +134,9 @@ export default {
   }
   .van-nav-bar{
     z-index: 3000;
+  }
+  .my-icon{
+    font-size: 14px;
   }
 }
 </style>

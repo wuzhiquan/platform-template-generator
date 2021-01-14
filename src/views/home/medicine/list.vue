@@ -13,7 +13,7 @@ Warning:
 <template>
   <wrap-page hasSearch :searchPlaceholder="'药品名称/症状'" @querySearch="getSearch">
     <template #headerRight>
-      <van-icon name="replay" size="20" color="#666" @click="refresh"/>
+      <van-icon name="replay" color="#666" @click="refresh"/>
     </template>
     <div class="listcade" id="wrap">
       <van-cell v-for="(item, index) in items"
